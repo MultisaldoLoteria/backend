@@ -12,6 +12,7 @@ const app = express();
 
 const tranRouter = require('./routers/transacciones');
 const userRouter = require('./routers/user');
+const rolRouter = require('./routers/rol');
 
 
 //MIDDLEWARES
@@ -33,6 +34,8 @@ app.use((req, res, next) => {
 
 app.use('/api/transacciones', tranRouter);
 app.use('/api/user', userRouter);
+app.use('/api/rol', rolRouter);
+
 
 
 //HANDLING ERRORS
